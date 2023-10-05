@@ -1,0 +1,27 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        
+        <div class="password-section">
+            <div id="hero-section">
+                <h1>Generate a </h1>
+                <h1 id="hero-green">random password</h1>
+            </div>
+            <label>
+                Password Length: <span id="lengthValue">16</span>
+                <input id="passwordLength" type="range" min="8" max="32" value="16" onchange="updateLengthValue()">
+            </label>
+            <label>
+                <input id="includeNumbers" type="checkbox" checked> Include Numbers
+            </label>
+            <label>
+                <input id="includeSymbols" type="checkbox" checked> Include Symbols
+            </label>
+            <input id="passwordField" type="text" readonly onclick="copyToClipboard()">
+            <button onclick="generatePassword()">Generate Password</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
